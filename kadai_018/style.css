@@ -1,0 +1,88 @@
+/* 親div（#top）のスタイル */
+#top {
+  width: 800px;
+  background-color: #dcc9f4;
+  margin: 20px auto; /* 上下20px・中央寄せ */
+  text-align: center; /* 中のp要素を中央に */
+  }
+
+/* p要素（.top-child）のスタイル */
+.top-child {
+  display: inline-block;       /* 横並びにする */
+  width: 20%;                  /* 親要素の20%幅 */
+  background-color: #ffd9df;   /* 背景色 */
+}
+
+/* 中央のピンク背景エリア */
+#middle {
+  width: 800px;
+  height: 800px;
+  background-color: #ffd9df;
+  margin: 20px auto; /* 上下20px + 中央寄せ */
+  position: relative; /* 子要素のabsolute配置の基準にする */
+}
+
+/* 青い3つの四角（共通スタイル） */
+#middle-child01,
+#middle-child02,
+#middle-child03 {
+  width: 200px;
+  height: 200px;
+  background-color: #87ceeb;
+  position: absolute;
+}
+
+/* 個別位置指定 */
+#middle-child01 {
+  top: 100px;
+  left: 100px;
+}
+
+#middle-child02 {
+  top: 300px;
+  left: 300px;
+}
+
+#middle-child03 {
+  top: 500px;
+  left: 500px;
+}
+
+/* 親要素（下の大枠） */
+#bottom {
+  width: 800px;
+  height: 300px;
+  background-color: #87ceeb; /* 水色 */
+  margin: 0 auto;             /* 中央配置 */
+  position: relative;         /* 子要素の絶対配置の基準にする */
+}
+
+/* 共通スタイル：3つの図形 */
+#bottom-child01,
+#bottom-child02,
+#bottom-child03 {
+  width: 400px;
+  height: 100px;
+  background-color: #e5dcf0; /* 紫色 */
+  position: absolute;
+}
+
+/* 各位置指定 */
+
+/* child01: 左下に固定配置 */
+#bottom-child01 {
+  top: 0;
+  left: 0px;
+}
+
+/* child02: 本来の位置（例: left: 0）から左に200pxずらして右寄りに配置 */
+#bottom-child02 {
+  top: 100px;
+  left: 200px;
+}
+
+/* child03: 本来の位置（例: left: 0）から左に400pxずらしてさらに右寄りに配置 */
+#bottom-child03 {
+  bottom: 0;
+  left: 400px;
+}
